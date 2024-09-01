@@ -1,0 +1,262 @@
+/* .login {
+  min-height: 100vh;
+} */
+
+.container-login {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1700px) {
+  .container-login {
+    width: 1170px;
+  }
+}
+
+.container-login-content {
+  min-height: 100vh;
+}
+
+.login-img {
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 576px) {
+  .login-img {
+    min-height: 50vh;
+  }
+}
+
+.login-img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: #d5e3ec;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+.login-img::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 119%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: calc(100% + 130px);
+  background: #ffffff;
+  box-shadow: 0px 9px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+@media (max-width: 576px) {
+  .login-img::after {
+    top: 134%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    width: 49rem;
+    height: calc(100% + 35px);
+  }
+}
+
+.login-img p {
+  color: #2387c2 !important;
+}
+
+.login-hero-container {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 576px) {
+  .login-hero-container {
+    top: 52%;
+    left: 50%;
+  }
+}
+
+.login-hero-container img {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .login-hero-container img {
+    width: 10rem;
+  }
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* // content hero  */
+
+.form-containers {
+  max-width: 370px;
+}
+@media (max-width: 576px) {
+  .form-containers {
+    max-width: 327px;
+  }
+}
+
+.form-group-parent.invalid #error {
+  opacity: 1;
+}
+
+.form-group-parent.invalid .form-group {
+  box-shadow: 0 0 2px 0px #f01010;
+  border: 1px solid #ff6868c2;
+}
+
+.form-group-parent.invalid .form-group input {
+  color: #ff4949;
+}
+.form-group-parent.invalid .form-group input::placeholder {
+  color: #ff4949;
+}
+
+.form-group-parent.invalid svg path {
+  fill: #d44747;
+}
+
+.form-group {
+  position: relative;
+  border: 1px solid #d9d9d7;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 18px;
+  transition: 0.2s;
+}
+
+.form-group-parent #error {
+  font-size: 12px;
+  padding-left: 10px;
+  padding-top: 1px;
+  color: #ef6b6b;
+  height: 17px;
+  display: block;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+@media (max-width: 576px) {
+  .login-content {
+    padding: 0 0 20px 0;
+  }
+}
+
+.login-content h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 42px;
+  color: #035781;
+}
+.login-content p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  color: #292c2d;
+}
+
+.form-containers input {
+  outline: none;
+}
+
+.custome-link {
+  cursor: pointer;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #035781;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.bnts .btn {
+  width: 186px;
+  height: 45px;
+  border-radius: 20px;
+}
+.bnts .btn:nth-child(1) {
+  background: #2387c2;
+  color: white;
+}
+.bnts .btn:nth-child(2) {
+  background: #ffffff;
+  border: 2px solid #2387c2;
+  color: #2387c2;
+}
+
+.signwith p {
+  position: relative;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  color: #aeaeae;
+}
+
+.signwith p::before {
+  position: absolute;
+  content: "";
+  width: 27%;
+  height: 1px;
+  background-color: #aeaeae;
+  top: 50%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+}
+.signwith p::after {
+  position: absolute;
+  content: "";
+  width: 27%;
+  height: 1px;
+  background-color: #aeaeae;
+  top: 50%;
+  left: 84%;
+  transform: translate(-50%, -50%);
+}
+
+.links div {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #d9d9d7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+@media (max-width: 576px) {
+  .links div {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .links div img {
+    width: 40%;
+  }
+
+  .links div .fp-login {
+    width: 28%;
+  }
+}

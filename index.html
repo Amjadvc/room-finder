@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏠 Room finder</title>
+
+    <!-- // styles  -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- // fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .gradient-bg {
+        background: linear-gradient(180deg, #f8f4db, white);
+      }
+    </style>
+  </head>
+  <body class="gradient-bg">
+    <main>
+      <!-- Header  -->
+      <header class="pb-4 realative d-flex justify-content-center">
+        <nav class="navbar navbar-expand-md mx-auto absolute container-lg">
+          <div class="container-lg flex-row-reverse flex-md-row px-xl-4 py-2">
+            <button
+              class="navbar-toggler collapsed d-flex d-md-none flex-column justify-content-around"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo03"
+              aria-controls="navbarTogglerDemo03"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="toggler-icon top-bar"></span>
+              <span class="toggler-icon middle-bar"></span>
+              <span class="toggler-icon bottom-bar"></span>
+            </button>
+
+            <div class="logo">
+              <a class="logo-container" href="#">
+                <p class="mb-0">Room</p>
+                <p class="mb-0">ROOMMATE</p>
+              </a>
+            </div>
+
+            <div
+              class="custome-nav collapse navbar-collapse gap-20"
+              id="navbarTogglerDemo03"
+            >
+              <ul
+                class="custome-ul navbar-nav me-auto mb-2 mb-md-0 justify-content-end align-items-center pt-4 pt-md-0"
+              >
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">FAQ</a>
+                </li>
+                <div class="line d-none d-md-block"></div>
+                <li class="nav-item">
+                  <a class="nav-link"
+                    >EN
+                    <span>
+                      <img
+                        src="./assets/svg/caret-down-fill.svg"
+                        alt="caret down fill"
+                      /> </span
+                  ></a>
+                </li>
+              </ul>
+              <div class="btn-container">
+                <a href="./Login.html" class="custome-btn">Get Start ?</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero  one -->
+      <section class="hero">
+        <div class="hero-container container-lg d-flex">
+          <div class="hero-text">
+            <div class="main-text">
+              <h1 class="first-header">Room</h1>
+              <h1>and room</h1>
+              <h1>Finder</h1>
+            </div>
+            <div class="secondary-text">
+              <div class="butn-arrow">
+                <img src="./assets/svg/arrow-down.svg" alt="arrow down" />
+              </div>
+              <div>
+                <p>
+                  Find your prefer room and choose<br />
+                  roommate who agree with.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-imge">
+            <div class="main-img">
+              <img src="./assets/imgs/character1.png" />
+            </div>
+            <div class="main-img-bg">
+              <img src="./assets/svg/Ellipse78.svg" />
+              <img src="./assets/svg/Ellipse77.svg" />
+              <img src="./assets/svg/Ellipse76.svg" />
+            </div>
+            <div class="search-icon">
+              <img src="./assets/svg/search-icon.svg" />
+            </div>
+
+            <img class="star star-red" src="./assets/svg/star-red.svg" />
+            <img class="star star-blue" src="./assets/svg/star-blue.svg" />
+            <img class="star star-yellow" src="./assets/svg/star-yellow.svg" />
+            <img class="path" src="./assets/svg/path-hero.svg" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero two  -->
+      <section class="second-hero">
+        <div class="hero-container container-lg d-flex">
+          <div class="hero-imge ss">
+            <div class="main-img">
+              <img src="./assets/imgs/character2.png" />
+            </div>
+
+            <img class="room" src="./assets/svg/room.svg" />
+
+            <img class="star star-r-t" src="./assets/svg/star-red.svg" />
+            <img class="star star-b-t" src="./assets/svg/star-blue.svg" />
+            <img class="star star-y-t" src="./assets/svg/star-yellow.svg" />
+            <img class="path-t one" src="./assets/svg/path-hero.svg" />
+            <img class="path-t two" src="./assets/svg/path-hero.svg" />
+          </div>
+          <div class="hero-text">
+            <div class="main-text-t">
+              <h1 class="d-inline-block">How</h1>
+              <h1 class="main-color d-inline-block">can we help you</h1>
+              <h1 class="mb-0">to display your house <br />to rent?</h1>
+            </div>
+            <div class="secondary-text-t">
+              <div class="pcontainer">
+                <p class="mb-0">
+                  You can add your advertisement about your apartment or room
+                  you want to attract customers to it.
+                </p>
+              </div>
+              <div class="btn-container">
+                <button class="btn-hero">
+                  Get Start
+                  <span><img src="./assets//svg/chevron-right.svg" /> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- services  -->
+      <section class="services">
+        <div
+          class="container-lg d-flex justify-content-between align-items-center"
+        >
+          <div class="services-text-content">
+            <h2 class="services-text-top">Our services</h2>
+            <h2 class="services-text">offered to you by</h2>
+            <h2 class="services-text">Roomyco</h2>
+          </div>
+          <div class="services-card">
+            <div class="card">
+              <div class="card-botm">
+                <p>Find a roommate</p>
+              </div>
+              <div class="nav-cards">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="elip-container elip-line-7">
+              <img src="./assets/svg/line7.svg" />
+            </div>
+          </div>
+
+          <div class="elip-container one">
+            <img class="elip elip-one" src="./assets/svg/Ellipse72.svg" />
+          </div>
+          <div class="elip-container two">
+            <img class="elip elip-one" src="./assets/svg/Ellipse73.svg" />
+          </div>
+          <div class="elip-container three">
+            <img class="elip elip-one" src="./assets/svg/Ellipse74.svg" />
+          </div>
+          <div class="elip-container tree">
+            <img src="./assets/svg/tree-y.svg" />
+          </div>
+          <div class="elip-container elip-star-r">
+            <img src="./assets/svg/star-red.svg" />
+          </div>
+          <div class="elip-container elip-star-b">
+            <img src="./assets/svg/star-blue.svg" />
+          </div>
+          <div class="elip-container elip-line-6">
+            <img src="./assets/svg/line6.svg" />
+          </div>
+        </div>
+      </section>
+
+      <!-- about  -->
+      <section class="aboutus">
+        <div class="container-lg d-flex align-items-center flex-column">
+          <div class="about-header">
+            <h1>About our app <span>ROOM</span></h1>
+          </div>
+          <div class="message-container">
+            <div class="message-imges">
+              <div class="message-imges-inner">
+                <img
+                  src="./assets/imgs/Group-576.png"
+                  alt="app ui"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="message-content">
+              <div class="message-content-header">
+                <h1>Message page</h1>
+                <img src="./assets/svg/Line14.svg" loading="lazy" />
+              </div>
+              <p class="roommate">
+                You can communicate with roommate or homeowners.
+              </p>
+              <div class="about-btns-container">
+                <button>
+                  <img
+                    src="./assets/svg/Arrow4.svg"
+                    alt=" Arrow"
+                    loading="lazy"
+                  />
+                </button>
+                <button>
+                  <img
+                    src="./assets/svg/Arrow4.svg"
+                    alt=" Arrow"
+                    loading="lazy"
+                  />
+                </button>
+              </div>
+              <p class="downlead">Downlead Now</p>
+
+              <div class="about-btns-download-container">
+                <button>
+                  <img
+                    src="./assets/svg/android2.svg"
+                    alt=" android "
+                    loading="lazy"
+                  />
+                  <span>Android</span>
+                </button>
+                <button>
+                  <img src="./assets/svg/ios.svg" alt=" ios" loading="lazy" />
+                  <span>iOS</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq">
+        <div class="container-lg d-flex align-items-center flex-column">
+          <div class="faq-header">
+            <h1>FAQ</h1>
+          </div>
+          <div class="card-container">
+            <div class="custome-card one">
+              <p class="card-header">What else does our app offer you?</p>
+              <p class="card-body top">
+                The services of searching for Roommates, seeker for room, easy.
+              </p>
+              <p class="card-body bottom">
+                access and direct communication with users through the in-app
+                conversation, and lots of features.
+              </p>
+
+              <img
+                src="./assets/imgs/Questions.png"
+                alt="Question"
+                loading="lazy"
+              />
+            </div>
+            <!-- // -->
+            <div class="custome-card two">
+              <p class="card-header">
+                Where can I avail of the application services?
+              </p>
+              <p class="card-body top">
+                All regions within the UAE, all seven emirates.
+              </p>
+
+              <img
+                src="./assets/imgs/Address.png"
+                alt="Address"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- // -->
+            <div class="custome-card three">
+              <p class="card-header">
+                The application is safe for my own data?
+              </p>
+              <p class="card-body top">
+                Surely, we designed the app with the latest technology and
+                software that ensures the highest degree of security and
+                protection of users' information.
+              </p>
+
+              <img src="./assets/imgs/Data.png" alt="Data" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- we are  -->
+      <section class="who-we-are">
+        <div class="container-lg d-flex align-items-center flex-column">
+          <div class="who-we-are-header">
+            <h1>who we are</h1>
+          </div>
+          <div class="who-we-are-container">
+            <div class="who-we-are-img">
+              <img src="./assets/imgs/amico.png" alt=" amico" loading="lazy" />
+            </div>
+            <div class="who-we-are-content">
+              <p>
+                Surely, we designed the app with the latest technology and
+                software that ensures the highest degree of security and
+                protection of users' information. Surely, we designed the app
+                with the latest technology and software that ensures the highest
+                degree of security and protection of users' information.
+              </p>
+            </div>
+          </div>
+          <img
+            class="tree-r-we"
+            src="./assets/svg/red-tree-w.svg"
+            alt="red tree"
+            loading="lazy"
+          />
+          <img
+            class="tree-y-we"
+            src="./assets/svg/yellow-tree-w.svg"
+            alt="red tree"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- conectUs  -->
+      <section class="conectUs">
+        <div class="conectUs-container">
+          <div class="form-container">
+            <form>
+              <div>
+                <label for="name">Your Name</label>
+                <input id="name" name="username" type="text" />
+              </div>
+              <div>
+                <label for="email">Your Email</label>
+                <input id="email" name="email" type="email" />
+              </div>
+              <div class="area-container">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Type something if you want..."
+                ></textarea>
+                <img
+                  class="area-star"
+                  src="./assets/svg/star-red.svg"
+                  alt=" star red"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="form-btn">
+                <button type="button">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="phto-container">
+            <h2>Let's talk</h2>
+            <p>
+              To request a quote or want to meet up for coffee contact us
+              directly or fill out the form and we will get back to you
+              promptly.
+            </p>
+            <div class="phtoContainer">
+              <img
+                src="./assets/imgs/Email-campaign.png"
+                alt="Email campaign"
+                loading="lazy"
+              />
+            </div>
+            <img
+              class="phto-star"
+              src="./assets/svg/star-red.svg"
+              alt=" star red"
+              loading="lazy"
+            />
+            <img
+              class="phto-ellipse"
+              src="./assets/svg/Ellipse72.svg"
+              alt="ellipse"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- footer  -->
+      <footer>
+        <div class="container-lg">
+          <div class="footer-logo-container">
+            <div class="footer-logo-inner">
+              <div class="footer-logo-img">
+                <img
+                  src="./assets/svg/footer-logo.svg"
+                  alt="footer logo"
+                  loading="lazy"
+                />
+              </div>
+              <div class="footer-logo">
+                <a class="logo-container" href="#">
+                  <p class="mb-0">ROOMYCO</p>
+                  <p class="mb-0">ROOMMATE</p>
+                </a>
+              </div>
+            </div>
+            <div class="footer-text">
+              <p class="mb-0">
+                Find your prefer room and choose roommate who agree.
+              </p>
+            </div>
+            <div class="soials">
+              <a href="/">
+                <img
+                  src="./assets/svg/instagram.svg"
+                  alt="instagram"
+                  loading="lazy"
+              /></a>
+              <a href="/">
+                <img
+                  src="./assets/svg/facebook.svg"
+                  alt="facebook"
+                  loading="lazy"
+              /></a>
+              <a href="/">
+                <img
+                  src="./assets/svg/twitter.svg"
+                  alt="twitter"
+                  loading="lazy"
+              /></a>
+              <a href="/">
+                <img src="./assets/svg/tiktok.svg" alt="tiktok" loading="lazy"
+              /></a>
+              <a href="/">
+                <img
+                  src="./assets/svg/whatsapp.svg"
+                  alt="whatsapp"
+                  loading="lazy"
+              /></a>
+            </div>
+            <div class="link"><p>www.Romm.com</p></div>
+          </div>
+          <div class="Terms-contaitner">
+            <div class="list-header">
+              <h2>Terms & policies</h2>
+              <img src="./assets//svg/footer-path.svg" alt="path" />
+            </div>
+            <ul class="list-unstyled">
+              <li><a href="/">Terms of service</a></li>
+              <li><a href="/">Privacy policy</a></li>
+              <li><a href="/">Cookie policy</a></li>
+            </ul>
+          </div>
+          <div class="contact-contaitner">
+            <div class="list-header">
+              <h2>Contact</h2>
+              <img src="./assets//svg/footer-path.svg" alt="path" />
+            </div>
+            <ul class="list-unstyled">
+              <li>
+                <span
+                  ><img src="./assets/svg/envelope-fill.svg" alt="envelope"
+                /></span>
+                <a href="/">roomyco@room.com</a>
+              </li>
+              <li>
+                <span
+                  ><img src="./assets/svg/telephone-fill.svg" alt="telephone"
+                /></span>
+                <a href="/">+971 586 834 566</a>
+              </li>
+
+              <li>
+                <span
+                  ><img src="./assets/svg/location.svg" alt="location"
+                /></span>
+                <a href="/">Emirates</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="rights container-md">
+          <p class="mb-0">All rights are save 2024 by company.com</p>
+        </div>
+      </footer>
+    </main>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
