@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏠 Room finder</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- // styles  -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/favorite.css" />
+
+    <!-- // fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header  -->
+
+    <header class="realative d-flex justify-content-center">
+      <nav
+        class="navbar navbar-expand-md mx-auto absolute justify-content-center container-lg"
+      >
+        <div class="row container-lg flex-row-reverse flex-md-row px-xl-4 py-1">
+          <!-- button togel  -->
+          <button
+            class="navbar-toggler collapsed d-flex d-md-none flex-column justify-content-around"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+          </button>
+          <!-- logo -->
+          <div class="col col-sm-4 col-xl-5 footer-logo-inner ps-2">
+            <div class="footer-logo-img">
+              <img src="./assets/svg/login-logo.svg" alt=" logo" />
+            </div>
+            <div class="footer-logo">
+              <a class="logo-container" href="#">
+                <p class="mb-0">ROOMYCO</p>
+                <p class="mb-0">ROOMMATE</p>
+              </a>
+            </div>
+          </div>
+          <!--links -->
+          <div
+            class="col col-sm-8 col-xl-7 custome-nav p-0 justify-content-between collapse navbar-collapse gap-20"
+            id="navbarTogglerDemo03"
+          >
+            <ul
+              class="custome-ul mt-4 mt-md-0 navbar-nav mb-2 mb-md-0 justify-content-center align-items-center pt-4 pt-md-0"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link">See More</a>
+              </li>
+            </ul>
+
+            <ul
+              class="custome-ul navbar-nav mb-2 mb-md-0 justify-content-end align-items-center pt-md-0"
+            >
+              <li class="nav-item">
+                <img
+                  src="./assets/svg/heart-fill.svg"
+                  alt="avtar"
+                  loading="lazy"
+                />
+              </li>
+              <li class="nav-item">
+                <img
+                  src="./assets/svg/Subtract.svg"
+                  alt="avtar"
+                  loading="lazy"
+                />
+              </li>
+              <li class="nav-item">
+                <img
+                  src="./assets/svg/bell-fill.svg"
+                  alt="avtar"
+                  loading="lazy"
+                />
+              </li>
+              <li class="nav-item">
+                <img
+                  src="./assets/svg/grid-icon-fill.svg"
+                  alt="avtar"
+                  loading="lazy"
+                />
+              </li>
+              <li class="nav-item">
+                <a href="myprofile.html">
+                  <img
+                    src="./assets/svg/Ellipse-88.svg"
+                    alt="avtar"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <div class="line d-none d-md-block"></div>
+              <li class="nav-item">
+                <div class="p-0 select-outer lang-container">
+                  <button
+                    id="langBtn"
+                    class="btn-secondary dropdown-toggle custome-select w-100"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div>
+                      <span class="day-selected">EN</span>
+                      <span>
+                        <img
+                          src="./assets/svg/caret-down-fill.svg"
+                          alt="caret down fill"
+                        />
+                      </span>
+                    </div>
+                  </button>
+                  <ul id="langDropdown" class="dropdown-menu">
+                    <li class="langitem">English</li>
+                    <li class="langitem Arb">Arabic</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section
+      class="main-content container-lg mx-auto d-flex justify-content-center"
+    >
+      <div class="sec-container">
+        <div
+          class="sec-container-header d-flex justify-content-between align-items-center"
+        >
+          <h2>My favorite</h2>
+          <button class="d-flex justify-content-center align-items-center">
+            <img src="./assets/svg/dots.svg" alt="dots" loading="lazy" />
+          </button>
+        </div>
+
+        <div class="sec-header-choeses">
+          <div class="sec-header-choeses-c">
+            <button id="favorite-btn" class="active">Favorite</button>
+            <button id="overlooked-btn">Overlooked</button>
+          </div>
+        </div>
+
+        <div id="favorite-section" class="favorite-cards-container">
+          <div class="card-room row align-items-center">
+            <div class="img-containr col-md-4 col-xxl-3">
+              <img src="./assets/imgs/rr3.png" alt="room" loading="lazy" />
+            </div>
+            <div class="card-content col-md-8 col-xxl-9">
+              <div
+                class="card-content-header d-flex justify-content-between align-items-center"
+              >
+                <h2 class="m-0">Shared bedroom, Sharjah</h2>
+                <div class="card-rating">
+                  <img src="./assets/svg/rating-r.svg" alt="rating" />
+                </div>
+              </div>
+              <div class="price">
+                <p class="mb-0"><span>$ 1,000</span><span> /month</span></p>
+              </div>
+              <div class="card-rooms row">
+                <div class="bedroom col d-flex align-items-center">
+                  <img src="./assets/svg/bed.svg" alt="bed" />
+                  <p class="mb-0">2 Bedroom</p>
+                </div>
+                <div class="bathroom col d-flex align-items-center">
+                  <img src="./assets/svg/bathtub.svg" alt="bathtub" />
+                  <p class="mb-0">1 Bathroom</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-room row align-items-center">
+            <div class="img-containr col-md-4 col-xxl-3">
+              <img src="./assets/imgs/rr1.png" alt="room" loading="lazy" />
+            </div>
+            <div class="card-content col-md-8 col-xxl-9">
+              <div
+                class="card-content-header d-flex justify-content-between align-items-center"
+              >
+                <h2 class="m-0">Shared bedroom, Sharjah</h2>
+                <div class="card-rating">
+                  <img src="./assets/svg/rating-r.svg" alt="rating" />
+                </div>
+              </div>
+              <div class="price">
+                <p class="mb-0"><span>$ 600</span><span> /month</span></p>
+              </div>
+              <div class="card-rooms row">
+                <div class="bedroom col d-flex align-items-center">
+                  <img src="./assets/svg/bed.svg" alt="bed" />
+                  <p class="mb-0">2 Bedroom</p>
+                </div>
+                <div class="bathroom col d-flex align-items-center">
+                  <img src="./assets/svg/bathtub.svg" alt="bathtub" />
+                  <p class="mb-0">1 Bathroom</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-room row align-items-center">
+            <div class="img-containr-roommatie col-md-4 col-xxl-3">
+              <div class="img-container-roommatie-inner one"></div>
+            </div>
+            <div class="card-content-roommat col-md-8 col-xxl-9">
+              <div
+                class="card-content-header d-flex justify-content-between align-items-center"
+              >
+                <h2 class="m-0">Ali Saebe</h2>
+                <div class="card-rating">
+                  <img src="./assets/svg/rating-r.svg" alt="rating" />
+                </div>
+              </div>
+              <div class="card-rooms">
+                <div>
+                  <p>
+                    Hi there, I'm looking for apartment! I prefer it to be
+                    sunny.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-room row align-items-center">
+            <div class="img-containr-roommatie col-md-4 col-xxl-3">
+              <div class="img-container-roommatie-inner two"></div>
+            </div>
+            <div class="card-content-roommat col-md-8 col-xxl-9">
+              <div
+                class="card-content-header d-flex justify-content-between align-items-center"
+              >
+                <h2 class="m-0">Bana Dogo</h2>
+                <div class="card-rating">
+                  <img src="./assets/svg/rating-r.svg" alt="rating" />
+                </div>
+              </div>
+              <div class="card-rooms">
+                <div>
+                  <p>
+                    Hi there, I'm looking for roommate and apartment! I prefer
+                    to live with 2 people
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="overlooked-section" class="favorite-cards-container">
+          <div class="card-room row align-items-center">
+            <div class="img-containr col-md-4 col-xxl-3">
+              <img src="./assets/imgs/rr3.png" alt="room" loading="lazy" />
+            </div>
+            <div class="card-content col-md-8 col-xxl-9">
+              <div
+                class="card-content-header d-flex justify-content-between align-items-center"
+              >
+                <h2 class="m-0">Shared bedroom, Sharjah</h2>
+                <div class="card-rating">
+                  <img src="./assets/svg/rating-r.svg" alt="rating" />
+                </div>
+              </div>
+              <div class="price">
+                <p class="mb-0"><span>$ 1,000</span><span> /month</span></p>
+              </div>
+              <div class="card-rooms row">
+                <div class="bedroom col d-flex align-items-center">
+                  <img src="./assets/svg/bed.svg" alt="bed" />
+                  <p class="mb-0">2 Bedroom</p>
+                </div>
+                <div class="bathroom col d-flex align-items-center">
+                  <img src="./assets/svg/bathtub.svg" alt="bathtub" />
+                  <p class="mb-0">1 Bathroom</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-room row align-items-center">
+            <div class="img-containr-roommatie col-md-4 col-xxl-3">
+              <div class="img-container-roommatie-inner one"></div>
+            </div>
+            <div class="card-content-roommat col-md-8 col-xxl-9">
+              <div
+                class="card-content-header d-flex justify-content-between align-items-center"
+              >
+                <h2 class="m-0">Ali Saebe</h2>
+                <div class="card-rating">
+                  <img src="./assets/svg/rating-r.svg" alt="rating" />
+                </div>
+              </div>
+              <div class="card-rooms">
+                <div>
+                  <p>
+                    Hi there, I'm looking for apartment! I prefer it to be
+                    sunny.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/favorite.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

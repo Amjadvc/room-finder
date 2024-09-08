@@ -2,8 +2,6 @@ function initializeCarousel() {
   var myCarousel = document.querySelector("#carouselExampleControls");
   var isLargeScreen = window.matchMedia("(min-width: 576px)").matches;
 
-  // Remove event listeners to avoid duplication
-  // $(".carousel-control-next, .carousel-control-prev").off("click");
   $(
     ".cities-sec .carousel-control-next, .cities-sec .carousel-control-prev"
   ).off("click");
@@ -82,7 +80,6 @@ $(document).ready(function () {
   });
 });
 
-////////////////////////////////////////////////////////
 function initializeCarouselRoom() {
   var myCarousel = document.querySelector("#carouselRoomsControls");
   var isLargeScreen = window.matchMedia("(min-width: 576px)").matches;
@@ -163,5 +160,15 @@ $(document).ready(function () {
   initializeCarouselRoom();
   $(window).resize(function () {
     initializeCarouselRoom();
+  });
+});
+
+// handle move to a profile user
+const roommateCards = document.querySelectorAll(".roommate-card");
+
+roommateCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const userId = card.getAttribute("data-user-id");
+    window.location.href = `profile.htm?user=${userId}`;
   });
 });

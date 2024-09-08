@@ -1,0 +1,228 @@
+.main-content {
+  padding-bottom: 30px;
+}
+
+.sec-container {
+  padding: 26px 50px 44px;
+  width: 75%;
+  background: #fffef9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+  .sec-container {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .sec-container {
+    width: 95%;
+  }
+}
+@media (max-width: 576px) {
+  .sec-container {
+    padding: 26px 22px 44px;
+  }
+}
+
+.sec-container-header h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #292c2d;
+}
+.sec-container-header button {
+  background: #eaeaea;
+  border: none;
+  outline: none;
+  transform: rotate(90deg);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.sec-header-choeses {
+  margin-top: 15px;
+}
+
+.sec-header-choeses-c button {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 6px 23px;
+  background-color: transparent;
+  color: #292c2d;
+}
+
+.sec-header-choeses-c button.active {
+  background: rgba(35, 135, 194, 0.25);
+  color: #2387c2;
+}
+
+.favorite-cards-container {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.favorite-cards-container .card-room {
+  background: #f2eacc;
+  border-radius: 11px;
+  padding: 15px 5px;
+}
+
+.card-room .img-containr {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .card-room .img-containr {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .card-room .img-containr {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .card-room .img-containr {
+    width: 100%;
+  }
+}
+
+.card-room .img-containr img {
+  /* max-width: 190px;
+  height: 225px;
+  border-radius: 11px; */
+  height: 242px;
+  border-radius: 11px;
+  width: 100%;
+}
+
+.card-content {
+  /* padding-left: 70px; */
+  gap: 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .card-content-header {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .price {
+    text-align: center;
+  }
+}
+
+.card-content h2,
+.card-content-roommat h2 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #292c2d;
+}
+@media (max-width: 480px) {
+  .card-content h2,
+  .card-content-roommat h2 {
+    font-size: 20px;
+  }
+}
+
+.price p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.price p span:nth-child(1) {
+  color: #f3704a;
+}
+.price p span:nth-child(2) {
+  color: #aeaeae;
+}
+
+@media (max-width: 768px) {
+  .bedroom,
+  .bathroom {
+    justify-content: center;
+  }
+}
+
+.bedroom p,
+.bathroom p {
+  padding-left: 5px;
+}
+.bedroom p,
+.bathroom p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #292c2d;
+}
+.bathroom img,
+.bedroom img {
+  width: 24px;
+}
+
+.img-containr-roommatie {
+  display: flex;
+  justify-content: start;
+}
+
+@media (max-width: 768px) {
+  .img-containr-roommatie {
+    justify-content: center;
+  }
+}
+
+.img-container-roommatie-inner {
+  width: 150px;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+.img-container-roommatie-inner.one {
+  background-image: url("../assets/imgs/room-mate-1.png");
+}
+.img-container-roommatie-inner.two {
+  background-image: url("../assets/imgs/room-e-mate-2.png");
+}
+
+.card-content-roommat {
+  /* padding-left: 70px; */
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.card-content-roommat .card-rooms p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #292c2d;
+}
+
+@media (max-width: 768px) {
+  .card-content-roommat .card-rooms p {
+    text-align: center;
+  }
+}

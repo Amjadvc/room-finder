@@ -4,10 +4,6 @@ a {
 ul {
   list-style: none;
 }
-/* 
-body {
-  background: linear-gradient(180deg, #f8f4db, white);
-} */
 
 /* start header  */
 @media (max-width: 768px) {
