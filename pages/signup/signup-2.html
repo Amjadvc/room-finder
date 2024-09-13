@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <!-- // styles  -->
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/signup.css" />
+
+    <!-- // fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white">
+    <main>
+      <div id="popup" class="verification-code d-none">
+        <div class="container verification-code-inner">
+          <h2 class="mb-5">Enter your verification code!</h2>
+          <div class="row mb-5">
+            <div class="inp_parent col">
+              <input
+                type="text"
+                name="verification-code-one"
+                placeholder="-"
+                class="name-inp"
+                maxlength="1"
+              />
+            </div>
+            <div class="inp_parent col">
+              <input
+                type="text"
+                name="verification-code-two"
+                placeholder="-"
+                class="name-inp"
+                maxlength="1"
+              />
+            </div>
+            <div class="inp_parent col">
+              <input
+                type="text"
+                name="verification-code-three"
+                placeholder="-"
+                class="name-inp"
+                maxlength="1"
+              />
+            </div>
+            <div class="inp_parent col">
+              <input
+                type="text"
+                name="verification-code-four"
+                placeholder="-"
+                class="name-inp"
+                maxlength="1"
+              />
+            </div>
+          </div>
+          <div class="timer mb-1">
+            <p class="timer-inner m-0 text-center">
+              <strong><span id="timer">05:00</span></strong>
+            </p>
+          </div>
+          <div class="text text-center">
+            <p>I didn't received the code? <a href="">Send again</a></p>
+          </div>
+          <!-- // -->
+          <div class="btns-container mt-5">
+            <div class="bnts d-flex justify-content-center mb-3">
+              <button
+                data-next="verify"
+                type="button"
+                class="btn-code one w-100 colo"
+              >
+                Verify
+              </button>
+            </div>
+            <div class="bnts d-flex justify-content-center">
+              <button
+                data-next="not-now"
+                type="button"
+                class="btn-code two w-100 colo"
+              >
+                Not Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="steps" class="container-signup signup">
+        <div
+          class="container-signup-content d-flex flex-column flex-sm-row m-0"
+        >
+          <div class="signup-img col-sm-4">
+            <div class="container">
+              <div class="footer-logo-inner pt-3 pt-sm-5 ps-2">
+                <div class="footer-logo-img">
+                  <img src="../../assets/svg/login-logo.svg" alt="logo" />
+                </div>
+                <div class="footer-logo">
+                  <a class="logo-container" href="#">
+                    <p class="mb-0">ROOMYCO</p>
+                    <p class="mb-0">ROOMMATE</p>
+                  </a>
+                </div>
+              </div>
+              <div class="text-hero-container">
+                <p id="showStepText">why are you using Roomyco?</p>
+              </div>
+              <img
+                class="hero-bg"
+                src="../../assets/svg/login-bg-hero.svg"
+                alt="bg"
+              />
+              <div class="signup-steps">
+                <div
+                  id="stepN1"
+                  class="step rounded-circle d-flex justify-content-center align-items-center done"
+                >
+                  1
+                </div>
+                <div
+                  id="stepN2"
+                  class="step progress rounded-circle d-flex justify-content-center align-items-center"
+                >
+                  2
+                </div>
+                <div
+                  id="stepN3"
+                  class="step rounded-circle d-flex justify-content-center align-items-center"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="signup-content col-sm-8 d-flex justify-content-center align-items-center"
+          >
+            <div
+              class="container d-flex justify-content-center align-items-center flex-column"
+            >
+              <div class="form-containers w-100">
+                <form id="form" class="d-flex flex-column">
+                  <!-- //step two   -->
+                  <div id="step2" class="data-step2">
+                    <h3 class="mb-2">What you are looking for?</h3>
+
+                    <div class="checkbox-container d-flex flex-column">
+                      <div class="checkbox-wrapper">
+                        <label class="d-flex align-items-center">
+                          <input
+                            class="checkbox-inp"
+                            type="radio"
+                            name="account-type"
+                            value="seeker_of_roommate"
+                          />
+                          <p class="checkbox-label m-0">Seeker of roommate</p>
+                        </label>
+                      </div>
+                      <div class="checkbox-wrapper">
+                        <label class="d-flex align-items-center">
+                          <input
+                            class="checkbox-inp"
+                            type="radio"
+                            name="account-type"
+                            value="seeker_of_room"
+                          />
+                          <p class="checkbox-label m-0">Seeker of room</p>
+                        </label>
+                      </div>
+                      <div class="checkbox-wrapper">
+                        <label class="d-flex align-items-center">
+                          <input
+                            class="checkbox-inp"
+                            type="radio"
+                            name="account-type"
+                            value="place_only"
+                          />
+                          <p class="checkbox-label m-0">
+                            I want to list my place only
+                          </p>
+                        </label>
+                      </div>
+                      <span id="error">
+                        Please select at least one option to continue.</span
+                      >
+                    </div>
+
+                    <div class="bnts d-flex justify-content-center">
+                      <button data-next type="button" class="btn w-100 colo">
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../../js/signup-2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <!-- // styles  -->
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/signup.css" />
+
+    <!-- // fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white">
+    <main>
+      <div id="steps" class="container-signup signup">
+        <div
+          class="container-signup-content d-flex flex-column flex-sm-row m-0"
+        >
+          <div class="signup-img col-sm-4">
+            <div class="container">
+              <div class="footer-logo-inner pt-3 pt-sm-5 ps-2">
+                <div class="footer-logo-img">
+                  <img src="../../assets/svg/login-logo.svg" alt="logo" />
+                </div>
+                <div class="footer-logo">
+                  <a class="logo-container" href="#">
+                    <p class="mb-0">ROOMYCO</p>
+                    <p class="mb-0">ROOMMATE</p>
+                  </a>
+                </div>
+              </div>
+              <div class="text-hero-container">
+                <p id="showStepText">Tell us more about you</p>
+              </div>
+              <img
+                class="hero-bg"
+                src="../../assets/svg/login-bg-hero.svg"
+                alt="bg"
+              />
+              <div class="signup-steps">
+                <div
+                  id="stepN1"
+                  class="step rounded-circle d-flex justify-content-center align-items-center done"
+                >
+                  1
+                </div>
+                <div
+                  id="stepN2"
+                  class="step rounded-circle d-flex justify-content-center align-items-center done"
+                >
+                  2
+                </div>
+                <div
+                  id="stepN3"
+                  class="step rounded-circle d-flex justify-content-center align-items-center progress"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="signup-content col-sm-8 d-flex justify-content-center align-items-center"
+          >
+            <div
+              class="container d-flex justify-content-center align-items-center flex-column"
+            >
+              <div class="form-containers w-100">
+                <form id="form" class="d-flex flex-column">
+                  <!-- //step three  -->
+                  <div id="step3" class="data-step3">
+                    <div class="roommate-acount">
+                      <div
+                        class="name-container align-items-end d-flex mb-4 row"
+                      >
+                        <div class="col p-0 select-outer">
+                          <p class="location-label m-0 mb-1">
+                            What is your location?
+                          </p>
+                          <button
+                            id="countryBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="selected">Country</span>
+                          </button>
+                          <ul id="countryDropdown" class="dropdown-menu"></ul>
+                        </div>
+                        <div class="col p-0 select-outer">
+                          <button
+                            id="cityBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="city-selected">City</span>
+                          </button>
+                          <ul id="cityDropdown" class="dropdown-menu">
+                            <li class="dropdown-item">select country first</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- // -->
+                      <div
+                        class="name-container align-items-center d-flex mb-4 row"
+                      >
+                        <div class="col p-0 select-outer">
+                          <p class="location-label m-0">Where are you from?</p>
+                        </div>
+                        <div class="col p-0 select-outer">
+                          <button
+                            id="locationBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="location-selected">Select..</span>
+                          </button>
+                          <ul id="locationDropdown" class="dropdown-menu">
+                            <li class="dropdown-item">select city first</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- // -->
+                      <div
+                        class="name-container align-items-center d-flex mb-4 row"
+                      >
+                        <div class="col p-0 select-outer">
+                          <p class="location-label m-0">
+                            What' s your religion?
+                          </p>
+                        </div>
+                        <div class="col p-0 select-outer">
+                          <button
+                            id="religionBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="religion-selected">Select..</span>
+                          </button>
+                          <ul id="religionDropdown" class="dropdown-menu"></ul>
+                        </div>
+                      </div>
+                      <!-- // -->
+                      <div
+                        class="name-container align-items-end d-flex mb-4 row"
+                      >
+                        <div class="col p-0 select-outer">
+                          <p class="location-label m-0 mb-2">Date of brith</p>
+                          <button
+                            id="dayBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="day-selected">Day</span>
+                          </button>
+                          <ul id="dayDropdown" class="dropdown-menu"></ul>
+                        </div>
+                        <div class="col p-0 select-outer">
+                          <button
+                            id="monthBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="month-selected">Month</span>
+                          </button>
+                          <ul id="monthDropdown" class="dropdown-menu"></ul>
+                        </div>
+
+                        <div class="col p-0 select-outer">
+                          <button
+                            id="yearBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="year-selected">Year</span>
+                          </button>
+                          <ul id="yearDropdown" class="dropdown-menu">
+                            <li class="dropdown-item">Action</li>
+                            <li class="dropdown-item">Action</li>
+                            <li class="dropdown-item">Action</li>
+                            <li class="dropdown-item">Action</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- // -->
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-4"
+                      >
+                        <div class="p-0">
+                          <p class="location-label m-0">
+                            Count of people prefer to live with
+                          </p>
+                        </div>
+                        <div class="p-0 d-flex gap-2 gap-sm-3">
+                          <button
+                            data-dec
+                            type="button"
+                            class="custome-count-btn"
+                          >
+                            <img src="../../assets/svg/minus.svg" alt="minus" />
+                          </button>
+                          <strong data-cont-show class="custome-count"
+                            >2</strong
+                          >
+                          <button
+                            data-inc
+                            type="button"
+                            class="custome-count-btn"
+                          >
+                            <img src="../../assets/svg/plus.svg" alt="plus" />
+                          </button>
+                        </div>
+                      </div>
+                      <!-- // -->
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-4"
+                      >
+                        <div class="p-0">
+                          <p class="location-label m-0">
+                            Do you prefer any pets?
+                          </p>
+                        </div>
+                        <div class="p-0 d-flex">
+                          <button
+                            data-pets
+                            type="button"
+                            class="custome-check-btn"
+                          >
+                            <span>Yes</span>
+                            <span class="active-check">No</span>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- // -->
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-4"
+                      >
+                        <div class="p-0">
+                          <p class="location-label m-0">Do you smoke?</p>
+                        </div>
+                        <div class="p-0 d-flex">
+                          <button
+                            data-smoke
+                            type="button"
+                            class="custome-check-btn"
+                          >
+                            <span>Yes</span>
+                            <span class="active-check">No</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="error-container text-center">
+                        <span id="error"
+                          >Please complete all required fields.</span
+                        >
+                      </div>
+
+                      <div class="bnts d-flex justify-content-center">
+                        <button
+                          data-submit
+                          type="submit"
+                          class="btn w-100 colo"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../../js/signup-roommate.js"></script>
+  </body>
+</html>

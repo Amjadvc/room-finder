@@ -6,7 +6,7 @@ const passwordInp = document.querySelector('input[name="password"]');
 
 signInBtn.addEventListener("click", function () {
   if (validation()) {
-    window.location.href = "home.html";
+    window.location.href = "../home.html";
   }
 
   phoneNumberInp.addEventListener("input", validation);

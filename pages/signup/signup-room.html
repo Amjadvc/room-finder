@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <!-- // styles  -->
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/signup.css" />
+
+    <!-- // fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white">
+    <main>
+      <div id="steps" class="container-signup signup">
+        <div
+          class="container-signup-content d-flex flex-column flex-sm-row m-0"
+        >
+          <div class="signup-img col-sm-4">
+            <div class="container">
+              <div class="footer-logo-inner pt-3 pt-sm-5 ps-2">
+                <div class="footer-logo-img">
+                  <img src="../../assets/svg/login-logo.svg" alt="logo" />
+                </div>
+                <div class="footer-logo">
+                  <a class="logo-container" href="#">
+                    <p class="mb-0">ROOMYCO</p>
+                    <p class="mb-0">ROOMMATE</p>
+                  </a>
+                </div>
+              </div>
+              <div class="text-hero-container">
+                <p id="showStepText">Tell us more about you</p>
+              </div>
+              <img
+                class="hero-bg"
+                src="../../assets/svg/login-bg-hero.svg"
+                alt="bg"
+              />
+              <div class="signup-steps">
+                <div
+                  id="stepN1"
+                  class="step rounded-circle d-flex justify-content-center align-items-center done"
+                >
+                  1
+                </div>
+                <div
+                  id="stepN2"
+                  class="step rounded-circle d-flex justify-content-center align-items-center done"
+                >
+                  2
+                </div>
+                <div
+                  id="stepN3"
+                  class="step rounded-circle d-flex justify-content-center align-items-center progress"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="signup-content col-sm-8 d-flex justify-content-center align-items-center"
+          >
+            <div
+              class="container d-flex justify-content-center align-items-center flex-column"
+            >
+              <div class="form-containers w-100">
+                <form id="form" class="d-flex flex-column">
+                  <!-- //step three  -->
+                  <div id="step3" class="data-step3">
+                    <div class="roommate-acount">
+                      <!-- //room  -->
+                      <div
+                        class="name-container align-items-center d-flex mt-4 mb-3 row"
+                      >
+                        <div class="col p-0 select-outer">
+                          <p class="location-label m-0">I'm looking for</p>
+                        </div>
+                        <div class="col p-0 select-outer">
+                          <button
+                            id="roomBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="room-selected">Room</span>
+                          </button>
+                          <ul id="roomDropdown" class="dropdown-menu"></ul>
+                        </div>
+                      </div>
+
+                      <!-- /range/ -->
+                      <div class="col p-0 m-0 select-outer range-price">
+                        <p class="location-label m-0 mb-1">Price range</p>
+                        <p class="range-label m-0 mb-1">
+                          Monthly prices before fees and taxes
+                        </p>
+                        <div class="histogram-container">
+                          <!-- Histogram -->
+                          <div class="histogram">
+                            <div
+                              class="d-flex justify-content-center align-items-center"
+                            >
+                              <svg
+                                id="price-chart"
+                                width="350"
+                                height="100"
+                              ></svg>
+                            </div>
+                            <div class="histogram-input-container">
+                              <div class="range-slider">
+                                <span class="slider-track"></span>
+                                <input
+                                  id="min-val"
+                                  type="range"
+                                  class="min-val"
+                                  min="300"
+                                  max="3000"
+                                  value="300"
+                                  oninput="slideMin()"
+                                />
+                                <input
+                                  id="max-val"
+                                  type="range"
+                                  class="max-val"
+                                  min="300"
+                                  max="3000"
+                                  value="2500"
+                                  oninput="slideMax()"
+                                />
+                              </div>
+                              <!-- // -->
+                              <div
+                                class="input-box d-flex justify-content-between"
+                              >
+                                <div class="min-box">
+                                  <div
+                                    class="input-wrap d-flex justify-content-center align-items-center"
+                                  >
+                                    <label for="min-price">Minimum</label>
+                                    <div class="inpHolder input-field name-inp">
+                                      <input
+                                        id="min-price"
+                                        type="text"
+                                        name="min-price"
+                                        class="min-input"
+                                        onchange="setMinInput()"
+                                      />
+                                      <span>$</span>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="max-box">
+                                  <div
+                                    class="input-wrap d-flex justify-content-center align-items-center"
+                                  >
+                                    <label for="max-price">Maximum</label>
+                                    <div class="inpHolder input-field name-inp">
+                                      <input
+                                        id="max-price"
+                                        type="text"
+                                        name="max-price"
+                                        class="max-input"
+                                        onchange="setMaxInput()"
+                                      />
+                                      <span>$</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- // -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- // -->
+
+                      <!-- //loaction  -->
+                      <div
+                        class="name-container align-items-end d-flex mb-4 mt-4 row"
+                      >
+                        <div class="col p-0 select-outer">
+                          <p class="location-label m-0 mb-1">
+                            What is your location?
+                          </p>
+                          <button
+                            id="countryBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="selected">Country</span>
+                          </button>
+                          <ul id="countryDropdown" class="dropdown-menu"></ul>
+                        </div>
+                        <div class="col p-0 select-outer">
+                          <button
+                            id="cityBtn"
+                            class="btn-secondary dropdown-toggle custome-select w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <span class="city-selected">City</span>
+                          </button>
+                          <ul id="cityDropdown" class="dropdown-menu">
+                            <li class="dropdown-item">select country first</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- // -->
+                      <!-- Count of people prefer to live with -->
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-4"
+                      >
+                        <div class="p-0">
+                          <p class="location-label m-0">
+                            Count of people prefer to live with
+                          </p>
+                        </div>
+                        <div class="p-0 d-flex gap-2 gap-sm-3">
+                          <button
+                            data-dec
+                            type="button"
+                            class="custome-count-btn"
+                          >
+                            <img src="../../assets/svg/minus.svg" alt="minus" />
+                          </button>
+                          <strong data-cont-show class="custome-count"
+                            >2</strong
+                          >
+                          <button
+                            data-inc
+                            type="button"
+                            class="custome-count-btn"
+                          >
+                            <img src="../../assets/svg/plus.svg" alt="plus" />
+                          </button>
+                        </div>
+                      </div>
+                      <!-- // -->
+
+                      <!-- Number of people who live with you -->
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-4"
+                      >
+                        <div class="p-0">
+                          <p class="location-label m-0">
+                            Number of people who live with you
+                          </p>
+                        </div>
+                        <div class="p-0 d-flex gap-2 gap-sm-3">
+                          <button
+                            data-dec-live
+                            type="button"
+                            class="custome-count-btn"
+                          >
+                            <img src="../../assets/svg/minus.svg" alt="minus" />
+                          </button>
+                          <strong data-cont-show-live class="custome-count"
+                            >2</strong
+                          >
+                          <button
+                            data-inc-live
+                            type="button"
+                            class="custome-count-btn"
+                          >
+                            <img src="../../assets/svg/plus.svg" alt="plus" />
+                          </button>
+                        </div>
+                      </div>
+                      <!-- Do you prefer any pets? -->
+                      <!-- // -->
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-4"
+                      >
+                        <div class="p-0">
+                          <p class="location-label m-0">
+                            Do you prefer any pets?
+                          </p>
+                        </div>
+                        <div class="p-0 d-flex">
+                          <button
+                            data-pets
+                            type="button"
+                            class="custome-check-btn"
+                          >
+                            <span>Yes</span>
+                            <span class="active-check">No</span>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- Do you smoke? -->
+                      <!-- // -->
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-4"
+                      >
+                        <div class="p-0">
+                          <p class="location-label m-0">Do you smoke?</p>
+                        </div>
+                        <div class="p-0 d-flex">
+                          <button
+                            data-smoke
+                            type="button"
+                            class="custome-check-btn"
+                          >
+                            <span>Yes</span>
+                            <span class="active-check">No</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="error-container text-center">
+                        <span id="error"
+                          >Please complete all required fields.</span
+                        >
+                      </div>
+
+                      <div class="bnts d-flex justify-content-center">
+                        <button
+                          data-submit
+                          type="submit"
+                          class="btn w-100 colo"
+                        >
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../../js/signup-room.js"></script>
+  </body>
+</html>

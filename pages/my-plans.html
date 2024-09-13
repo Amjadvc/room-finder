@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🏠 Room finder</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- // styles  -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/my-plans.css" />
+
+    <!-- // fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header  -->
+
+    <header class="realative d-flex justify-content-center">
+      <nav
+        class="navbar navbar-expand-md mx-auto absolute justify-content-center container-lg"
+      >
+        <div class="row container-lg flex-row-reverse flex-md-row px-xl-4 py-1">
+          <!-- button togel  -->
+          <button
+            class="navbar-toggler collapsed d-flex d-md-none flex-column justify-content-around"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+          </button>
+          <!-- logo -->
+          <div class="col col-sm-4 col-xl-5 footer-logo-inner ps-2">
+            <div class="footer-logo-img">
+              <img src="../assets/svg/login-logo.svg" alt=" logo" />
+            </div>
+            <div class="footer-logo">
+              <a class="logo-container" href="#">
+                <p class="mb-0">ROOMYCO</p>
+                <p class="mb-0">ROOMMATE</p>
+              </a>
+            </div>
+          </div>
+          <!--links -->
+          <div
+            class="col col-sm-8 col-xl-7 custome-nav p-0 justify-content-between collapse navbar-collapse gap-20"
+            id="navbarTogglerDemo03"
+          >
+            <ul
+              class="custome-ul mt-4 mt-md-0 navbar-nav mb-2 mb-md-0 justify-content-center align-items-center pt-4 pt-md-0"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="see-more.html">See More</a>
+              </li>
+            </ul>
+
+            <ul
+              class="custome-ul navbar-nav mb-2 mb-md-0 justify-content-end align-items-center pt-md-0"
+            >
+              <li class="nav-item">
+                <a href="favorite.html">
+                  <img
+                    src="../assets/svg/heart-fill.svg"
+                    alt="avtar"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <img
+                  src="../assets/svg/Subtract.svg"
+                  alt="avtar"
+                  loading="lazy"
+                />
+              </li>
+              <li class="nav-item">
+                <img
+                  src="../assets/svg/bell-fill.svg"
+                  alt="avtar"
+                  loading="lazy"
+                />
+              </li>
+              <li class="nav-item">
+                <img
+                  src="../assets/svg/grid-icon-fill.svg"
+                  alt="avtar"
+                  loading="lazy"
+                />
+              </li>
+              <li class="nav-item">
+                <a href="myprofile.html">
+                  <img
+                    src="../assets/svg/Ellipse-88.svg"
+                    alt="avtar"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <div class="line d-none d-md-block"></div>
+              <li class="nav-item">
+                <div class="p-0 select-outer lang-container">
+                  <button
+                    id="langBtn"
+                    class="btn-secondary dropdown-toggle custome-select w-100"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div>
+                      <span class="day-selected">EN</span>
+                      <span>
+                        <img
+                          src="../assets/svg/caret-down-fill.svg"
+                          alt="caret down fill"
+                        />
+                      </span>
+                    </div>
+                  </button>
+                  <ul id="langDropdown" class="dropdown-menu">
+                    <li class="langitem">English</li>
+                    <li class="langitem Arb">Arabic</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section
+      class="main-content mx-auto d-flex justify-content-center flex-column align-items-center"
+    >
+      <div
+        class="plan_header d-flex justify-content-center flex-column align-items-center"
+      >
+        <h2><span class="flexible">Flexible </span> <span>plans</span></h2>
+        <p class="m-0">Choose a monthly subscription plan for your</p>
+        <p class="m-0">advertisements service.</p>
+      </div>
+
+      <div class="wrapper mt-5">
+        <ul class="carouel m-0 p-0">
+          <li class="card-plan one">
+            <div
+              class="card-header d-flex justify-content-between align-items-center"
+            >
+              <div><h2>Starter</h2></div>
+              <div
+                class="price-contaienr d-flex justify-content-center align-items-center"
+              >
+                <span>Free</span>
+              </div>
+            </div>
+            <div class="title mt-4">
+              <p class="m-0">Post your advertisements for free</p>
+            </div>
+            <div class="benefits mt-3">
+              <ul class="p-0 row-gap-2">
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can add <strong>5</strong> posts</p>
+                </li>
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can reactive <strong>2</strong> posts</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="card-plan two">
+            <div
+              class="card-header d-flex justify-content-between align-items-center"
+            >
+              <div><h2>Golden</h2></div>
+              <div
+                class="price-contaienr d-flex justify-content-center align-items-center"
+              >
+                <span>$ 50</span>
+              </div>
+            </div>
+            <div class="title mt-4">
+              <p class="m-0">Buy golden plan for more features</p>
+            </div>
+            <div class="benefits mt-3">
+              <ul class="p-0 row-gap-2">
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can add <strong>10</strong> posts</p>
+                </li>
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can reactive <strong>5</strong> posts</p>
+                </li>
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can upgrade <strong>3</strong> posts</p>
+                </li>
+              </ul>
+            </div>
+            <div class="btn mt-3 w-100">
+              <button class="w-100">Buy now</button>
+            </div>
+          </li>
+          <li class="card-plan three">
+            <div
+              class="card-header d-flex justify-content-between align-items-center"
+            >
+              <div><h2>Silver</h2></div>
+              <div
+                class="price-contaienr d-flex justify-content-center align-items-center"
+              >
+                <span>$ 43</span>
+              </div>
+            </div>
+            <div class="title mt-4">
+              <p class="m-0">Buy silver plan for more features</p>
+            </div>
+            <div class="benefits mt-3">
+              <ul class="p-0 row-gap-2">
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can add <strong>7</strong> posts</p>
+                </li>
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can reactive <strong>4</strong> posts</p>
+                </li>
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can upgrade <strong>2</strong> posts</p>
+                </li>
+              </ul>
+            </div>
+            <div class="btn mt-3 w-100">
+              <button class="w-100">Buy now</button>
+            </div>
+          </li>
+          <li class="card-plan three">
+            <div
+              class="card-header d-flex justify-content-between align-items-center"
+            >
+              <div><h2>Bronze</h2></div>
+              <div
+                class="price-contaienr d-flex justify-content-center align-items-center"
+              >
+                <span>$ 30</span>
+              </div>
+            </div>
+            <div class="title mt-4">
+              <p class="m-0">Buy bronze plan for more features</p>
+            </div>
+            <div class="benefits mt-3">
+              <ul class="p-0 row-gap-2">
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can add <strong>6</strong> posts</p>
+                </li>
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can reactive <strong>3</strong> posts</p>
+                </li>
+                <li
+                  class="d-flex justify-content-start align-items-center gap-2 mb-1"
+                >
+                  <span>
+                    <img src="../assets/svg/check-lg.svg" alt="check"
+                  /></span>
+                  <p class="m-0">You can upgrade <strong>1</strong> posts</p>
+                </li>
+              </ul>
+            </div>
+            <div class="btn mt-3 w-100">
+              <button class="w-100">Buy now</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="../js/my-plans.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

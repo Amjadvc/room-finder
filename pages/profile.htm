@@ -13,11 +13,11 @@
     <!-- // styles  -->
     <link
       rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
     />
 
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/profile.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
 
     <!-- // fonts   -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,7 +52,7 @@
           <!-- logo -->
           <div class="col col-sm-4 col-xl-5 footer-logo-inner ps-2">
             <div class="footer-logo-img">
-              <img src="./assets/svg/login-logo.svg" alt=" logo" />
+              <img src="../assets/svg/login-logo.svg" alt=" logo" />
             </div>
             <div class="footer-logo">
               <a class="logo-container" href="#">
@@ -74,7 +74,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link">See More</a>
+                <a class="nav-link" href="see-more.html">See More</a>
               </li>
             </ul>
 
@@ -84,7 +84,7 @@
               <li class="nav-item">
                 <a href="favorite.html">
                   <img
-                    src="./assets/svg/heart-fill.svg"
+                    src="../assets/svg/heart-fill.svg"
                     alt="avtar"
                     loading="lazy"
                   />
@@ -92,21 +92,21 @@
               </li>
               <li class="nav-item">
                 <img
-                  src="./assets/svg/Subtract.svg"
+                  src="../assets/svg/Subtract.svg"
                   alt="avtar"
                   loading="lazy"
                 />
               </li>
               <li class="nav-item">
                 <img
-                  src="./assets/svg/bell-fill.svg"
+                  src="../assets/svg/bell-fill.svg"
                   alt="avtar"
                   loading="lazy"
                 />
               </li>
               <li class="nav-item">
                 <img
-                  src="./assets/svg/grid-icon-fill.svg"
+                  src="../assets/svg/grid-icon-fill.svg"
                   alt="avtar"
                   loading="lazy"
                 />
@@ -114,7 +114,7 @@
               <li class="nav-item">
                 <a href="myprofile.html">
                   <img
-                    src="./assets/svg/Ellipse-88.svg"
+                    src="../assets/svg/Ellipse-88.svg"
                     alt="avtar"
                     loading="lazy"
                   />
@@ -134,7 +134,7 @@
                       <span class="day-selected">EN</span>
                       <span>
                         <img
-                          src="./assets/svg/caret-down-fill.svg"
+                          src="../assets/svg/caret-down-fill.svg"
                           alt="caret down fill"
                         />
                       </span>
@@ -157,32 +157,32 @@
       <div class="info-contnet col-md-4 col-lg-3 m- p-0 position-relative">
         <div class="img-container-p position-absolute left-0">
           <div class="img-container-p-inner">
-            <img src="./assets/svg/Ellipse-88.svg" alt="room mate" />
+            <img data-img src="" alt="room mate" />
           </div>
         </div>
 
         <div class="name d-flex justify-content-between align-items-center">
-          <h2 class="m-0">Raneem Doghouz</h2>
+          <h2 data-name class="m-0"></h2>
           <div
             class="rate-one-container flex justify-content-center align-items-center"
           >
             <span>4.5</span>
-            <img src="./assets/svg/one-rat.svg" alt="rating" loading="lazy" />
+            <img src="../assets/svg/one-rat.svg" alt="rating" loading="lazy" />
           </div>
         </div>
         <div class="name-info">
-          <p class="m-0">Syrian</p>
+          <p class="m-0" id="user-location"></p>
 
           <p class="m-0">
-            Hi there, I am Raneem. I recently moved to Dubai for working and
-            looking for a roommate
+            Hi there, I am <span data-name></span> . I recently moved to Dubai
+            for working and looking for a roommate
           </p>
         </div>
         <div
           class="info-contnet-btns d-flex flex-column justify-content-center"
         >
-          <button>Edit Profile info</button>
-          <button>Add ad</button>
+          <button>Send message</button>
+          <button>Follow request</button>
         </div>
         <div class="about">
           <h2>About</h2>
@@ -220,7 +220,7 @@
                 />
               </svg>
 
-              <span>Female</span>
+              <span id="user-gender"></span>
             </li>
             <li>
               <svg
@@ -236,7 +236,7 @@
                 />
               </svg>
 
-              <span>June 3 , 1993</span>
+              <span id="user-age"></span>
             </li>
           </ul>
         </div>
@@ -258,7 +258,7 @@
                 />
               </svg>
 
-              <span>Raneem doghouz@gmail.com</span>
+              <span id="user-email"></span>
             </li>
             <li>
               <svg
@@ -290,7 +290,7 @@
           </div>
         </div>
         <div class="cards-container">
-          <span class="adves">Raneem's Advertisements</span>
+          <span id="user-advertisements" class="adves"></span>
           <div class="cards-container-inner">
             <div class="card-one">
               <div
@@ -300,18 +300,18 @@
                   class="card-header-img d-flex justify-content-center align-items-center"
                 >
                   <div class="card-img-container">
-                    <img src="./assets/svg/Ellipse-88.svg" alt=" room-mate" />
+                    <img data-img src="" alt=" room-mate" />
                   </div>
-                  <span>Raneem Doghouz</span>
+                  <span data-name></span>
                 </div>
                 <div class="card-header-dots">
-                  <img src="./assets/svg/dots.svg" alt="dots" />
+                  <img src="../assets/svg/dots.svg" alt="dots" />
                 </div>
               </div>
               <div class="card-imges">
                 <div class="card-imges-one">
-                  <img src="./assets/imgs/rr1.png" alt="room" loading="lazy" />
-                  <img src="./assets/imgs/rr2.png" alt="room" loading="lazy" />
+                  <img src="../assets/imgs/rr1.png" alt="room" loading="lazy" />
+                  <img src="../assets/imgs/rr2.png" alt="room" loading="lazy" />
                 </div>
               </div>
               <div class="card-info">
@@ -372,17 +372,17 @@
                   class="card-header-img d-flex justify-content-center align-items-center"
                 >
                   <div class="card-img-container">
-                    <img src="./assets/svg/Ellipse-88.svg" alt=" room-mate" />
+                    <img data-img src="" alt=" room-mate" />
                   </div>
-                  <span>Raneem Doghouz</span>
+                  <span data-name></span>
                 </div>
                 <div class="card-header-dots">
-                  <img src="./assets/svg/dots.svg" alt="dots" />
+                  <img src="../assets/svg/dots.svg" alt="dots" />
                 </div>
               </div>
               <div class="card-imges">
                 <div class="card-imges-two">
-                  <img src="./assets/imgs/rr3.png" alt="room" loading="lazy" />
+                  <img src="../assets/imgs/rr3.png" alt="room" loading="lazy" />
                 </div>
               </div>
               <div class="card-info">
@@ -443,12 +443,12 @@
                   class="card-header-img d-flex justify-content-center align-items-center"
                 >
                   <div class="card-img-container">
-                    <img src="./assets/svg/Ellipse-88.svg" alt=" room-mate" />
+                    <img data-img src="" alt=" room-mate" />
                   </div>
-                  <span>Raneem Doghouz</span>
+                  <span data-name></span>
                 </div>
                 <div class="card-header-dots">
-                  <img src="./assets/svg/dots.svg" alt="dots" />
+                  <img src="../assets/svg/dots.svg" alt="dots" />
                 </div>
               </div>
 
@@ -506,7 +506,7 @@
         </div>
       </div>
     </section>
-
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>

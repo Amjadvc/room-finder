@@ -1,0 +1,231 @@
+body {
+  font-family: "Poppins";
+  font-style: normal;
+}
+
+.plan_header {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.plan_header h2 {
+  font-weight: 700;
+  font-size: 30px;
+  color: #000000;
+  padding-bottom: 18px;
+}
+
+.plan_header h2 .flexible {
+  color: #035781;
+}
+
+.plan_header p {
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  color: #707070;
+}
+@media (max-width: 576px) {
+  .plan_header p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+/* slider  */
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  padding: 0 27px;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 25px;
+  }
+}
+
+.wrapper .carouel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 36px);
+  gap: 16px;
+  justify-items: center;
+  align-items: center;
+  height: 400px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+
+.wrapper .carouel::-webkit-scrollbar {
+  display: none;
+}
+.carouel.dragging {
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+}
+.carouel.dragging .card-plan {
+  cursor: grab;
+  user-select: none;
+}
+
+@media (max-width: 1200px) {
+  .wrapper .carouel {
+    grid-auto-columns: calc((100% / 3) - 11px);
+  }
+}
+
+@media (max-width: 1050px) {
+  .wrapper .carouel {
+    grid-auto-columns: calc((100% / 2) - 129px);
+  }
+}
+@media (max-width: 930px) {
+  .wrapper .carouel {
+    grid-auto-columns: calc((100% / 2) - 57px);
+  }
+}
+@media (max-width: 768px) {
+  .wrapper .carouel {
+    grid-auto-columns: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper .carouel {
+    gap: 10px;
+  }
+}
+
+.wrapper .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0357817a;
+  padding: 7px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .wrapper .arrow {
+    display: none;
+  }
+}
+
+.wrapper .arrow img {
+  width: 100%;
+}
+
+.wrapper .arrow.left {
+  left: 15px;
+}
+.wrapper .arrow.right {
+  right: 15px;
+}
+
+.card-plan {
+  scroll-snap-align: start;
+  padding: 18px 18px 2px;
+  border-radius: 11px;
+  width: 330px;
+  min-height: 290px;
+}
+
+@media (max-width: 992px) {
+  .card-plan {
+    width: 310px;
+  }
+}
+@media (max-width: 768px) {
+  .card-plan {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .card-plan {
+    width: 98%;
+  }
+}
+
+.card-plan.one {
+  background: #f2eacc;
+  border: 1px solid #dad6c8;
+}
+.card-header h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.card-plan.one .card-header h2 {
+  color: #035781;
+}
+.card-header .price-contaienr {
+  width: 67px;
+  height: 36px;
+  background: rgb(243 112 74 / 17%);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #f3704a;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 16px;
+  color: #707070;
+}
+.benefits ul li {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #292c2d;
+}
+
+/* // */
+.card-plan.two {
+  background: rgba(255, 212, 51, 0.19);
+  border: 1px solid #ffd433;
+  min-height: 309px;
+}
+.card-plan.two .card-header h2 {
+  color: #dfbb33;
+}
+
+.btn button {
+  outline: none;
+  border: none;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.card-plan.two .btn button {
+  background: #dfbb33;
+}
+
+/* // */
+
+.card-plan.three {
+  background: rgba(35, 135, 194, 0.19);
+  border: 1px solid #2387c2;
+}
+.card-plan.three .card-header h2 {
+  color: #035781;
+}
+.card-plan.three .btn button {
+  background: #2387c2;
+}
+/* // */

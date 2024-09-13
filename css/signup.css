@@ -637,3 +637,139 @@
   border-color: #f68989;
   box-shadow: 0 0 4px #bc6e6e;
 }
+
+/*step3 range component  */
+
+.range-label {
+  font-weight: 400;
+  font-size: 14px;
+  color: #707070;
+  font-family: "Poppins";
+}
+
+.histogram svg {
+  fill: #292c2d;
+}
+
+svg rect {
+  transition: fill 0.3s;
+}
+
+/* histogram-input-container */
+.range-slider {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin: 5px 0 20px;
+  background: #e6e6e6;
+  border-radius: 7px;
+}
+
+.slider-track {
+  height: 100%;
+  position: absolute;
+  background-color: #f3704ab0;
+}
+
+.range-slider input {
+  position: absolute;
+  width: 100%;
+  background: none;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: #f3704a;
+  border: 3px solid #f3704a;
+  pointer-events: auto;
+  appearance: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: #f3704a;
+  border: 3px solid #f3704a;
+  pointer-events: auto;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.input-box {
+  display: flex;
+}
+
+.input-wrap {
+  gap: 5px;
+}
+
+.input-field {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #d9d9d7;
+  box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0.160784);
+  border-radius: 11px;
+  max-width: 77px;
+  max-height: 40px;
+}
+
+@media (max-width: 576px) {
+  .input-field {
+    font-size: 14px;
+    max-width: 73px;
+    max-height: 38px;
+  }
+}
+.input-wrap label {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  color: #161720;
+  font-family: "Poppins";
+}
+
+@media (max-width: 576px) {
+  .input-wrap label {
+    font-size: 14px;
+  }
+}
+
+.inpHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inpHolder input {
+  border: none;
+  outline: none;
+  width: 58%;
+  text-align: center;
+}
+#roomBtn {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.data-step3 #officeNameBtn.invalid {
+  border-color: #f68989;
+  box-shadow: 0 0 4px #bc6e6e;
+}
+/*roommate-acount */
+
+@media (min-width: 576px) {
+  .roommate-acount {
+    padding: 20px 0;
+  }
+}
