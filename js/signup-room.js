@@ -152,7 +152,7 @@ function validateField(field, value) {
       isValid = value !== validationRules.city;
       break;
     case "room":
-      isValid = value !== validationRules.room;
+      isValid = true;
       break;
     default:
       isValid = false;
